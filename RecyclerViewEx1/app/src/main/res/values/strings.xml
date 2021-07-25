@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">RecyclerViewEx1</string>
 
-    <string name = "program_name">Java\ JavaScript\ Python\ C\ C++\ Rust\ Go\ Ruby\ Kotlin\ Scala\</string>
+    <string name = "items">Java\ JavaScript\ Python\ C\ C++\ Rust\ Go\ Ruby\ Kotlin\ Scala\</string>
+
+
 
 </resources>
 

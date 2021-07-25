@@ -17,8 +17,11 @@ public class MainActivity extends AppCompatActivity {
     private MainAdapter mainAdapter;
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
-    private int count = 0;
-    private int i = -1;
+    private int i = 0;
+
+
+    String[] items = new String[]{"Java", "JavaScript", "Python", "C", "C++", "Rust", "Go", "Ruby", "Kotlin", "Scala"};
+
 
 
     @Override
@@ -33,23 +36,30 @@ public class MainActivity extends AppCompatActivity {
 
         arrayList = new ArrayList<>();
 
+
+
         mainAdapter = new MainAdapter(arrayList);
         recyclerView.setAdapter(mainAdapter);
 
 
-        final String[] items = {"Java", "JavaScript", "Python", "C", "C++", "Rust", "Go", "Ruby", "Kotlin", "Scala"};
+
 
         Button add = (Button)findViewById(R.id.add);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                count++;
-                i++;
+                        try {
+                            i++;
 
-                MainData mainData = new MainData(count + "  " + items[i]);
-                arrayList.add(mainData);
-                mainAdapter.notifyDataSetChanged();
+                            MainData mainData = new MainData(i + "  " + items[i - 1]);
+                            arrayList.add(mainData);
+                            mainAdapter.notifyDataSetChanged();
+
+                        } catch (IndexOutOfBoundsException e) {
+                            e.printStackTrace();
+                        }
+
 
             }
         });

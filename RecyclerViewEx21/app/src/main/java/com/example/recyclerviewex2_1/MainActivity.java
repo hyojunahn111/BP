@@ -24,7 +24,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static String JSON_URL = "https://run.mocky.io/v3/db2895a5-9d1f-4b54-b6a7-c1411d32a0c6";
+    private static String JSON_URL = "https://run.mocky.io/v3/52cc3777-3f14-4984-8703-59d2ee6a1b7a";
 
     List<MainData> mainData;
     RecyclerView recyclerView;
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 JSONObject jsonObject = new JSONObject(s);
-                JSONArray jsonArray = jsonObject.getJSONArray("HOMEWORK");
+                JSONArray jsonArray = jsonObject.getJSONArray("homework");
 
                 for (int i = 0; i < jsonArray.length(); i++){
 

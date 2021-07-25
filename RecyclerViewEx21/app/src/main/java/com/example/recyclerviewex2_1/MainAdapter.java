@@ -44,7 +44,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> 
 
         Glide.with(mContext)
                 .load(mData.get(position).getImage())
-                .load(holder.image);
+                .into(holder.image);
 
     }
 
